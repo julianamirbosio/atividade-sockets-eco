@@ -53,10 +53,11 @@ def iniciar_servidor():
 
         if dados:
             mensagem = dados.decode("utf-8")
-            log(f"[SERVIDOR] Mensagem recebida: '{mensagem}'")
+            total_mensagens += 1
+            log(f"[SERVIDOR] Mensagem recebida: '{mensagem.upper()} ' (total: {total_mensagens})")
 
             # 6. Devolver a mensagem ao cliente (eco)
-            resposta = mensagem
+            resposta = mensagem.upper()
             conn.sendall(resposta.encode("utf-8"))
             log(f"[SERVIDOR] Eco enviado: '{resposta}'")
 

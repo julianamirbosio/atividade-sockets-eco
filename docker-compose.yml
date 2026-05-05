@@ -20,7 +20,7 @@ services:
     networks:
       - rede-eco
     # Mensagem padrão enviada ao servidor. Altere aqui para testar.
-    command: ["python", "cliente.py", "Olá, Sistemas Distribuídos!"]
+    command: ["python", "cliente.py", "Boa Tarde, professor Odorico!"]
 
 networks:
   rede-eco:
